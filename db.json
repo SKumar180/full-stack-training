@@ -1,0 +1,52 @@
+
+{
+"posts": [
+{
+"title": "My new server",
+"author": "Nitish",
+"id": 2
+},
+{
+"title": "Sugam's server",
+"author": "Sugam",
+"id": 3
+}
+],
+"comments": [
+{
+"Body": "My comment",
+"author": "Sugam",
+"id": 1
+},
+{
+"Body": "My comment2",
+"author": "Sugam2",
+"id": 2
+},
+{
+"Body": "My comment3",
+"author": "Sugam3",
+"id": 3
+}
+],
+"profile": {
+"name": "typicode"
+},
+"user": [
+{
+"fname": "Nitish2",
+"lname": "Kumar2",
+"id": 1
+},
+{
+"fname": "Nitish",
+"lname": "Kumar",
+"id": 2
+},
+{
+"fname": "Harry",
+"lname": "Potter",
+"id": 3
+}
+]
+}
