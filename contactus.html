@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Demo website</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" href="#">
+                <img src="https://media.comicbook.com/wp-content/uploads/2013/04/man-of-steel-not-an-s.jpg" alt="">
+                <span style="font-family: 'lobster', serif;">Shubham Kumar</span>
+            </a>
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" ui-sref="home" href="#/home"><i class="fa fa-home">::before</i>"Home" <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" ui-sref="videos" href="#/videos"><i class="fa fa-youtube"></i>Videos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled"ui-sref="newsfeed" href="#/newsfeed"><i class="fa fa-newspaper-o">::before</i>News Feed</a>
+                </li>
+              </ul>
+              <li class="nav-item">
+                <a class="nav-link disabled"ui-sref="contactus" href="#/contactus"><i class="fa fa-bug"></i>Contact Us</a>
+              </li>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+          <div ui-view class="ng-scope">
+            <div class="ng-scope">
+                <div class="container ng-scope" style="margin-top: 5px">
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                            <h1 class="display-3">Contact us</h1>
+                            <p class="lead">
+                                We love hearing from you. Send us your feedback . We will try our best to stand upto your expectations.
+            
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <form ng-submit="feedback(feed)" class="ng-pristine ng-valid-email ng-invalid ng-invalid-required">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" ng-model="feed.email" 
+                                    id="exampleInputEmail1" required aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-muted">We will keep your identity hidden.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" ng-model="feed.email" 
+                                    id="exampleInputEmail1" required aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-muted">We will keep your identity hidden.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" ng-model="feed.name" 
+                                    id="name" required aria-describedby="nameHelp" placeholder="Enter name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="website">Your website</label>
+                                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" ng-model="feed.website" 
+                                    id="website" required aria-describedby="websiteHelp" placeholder="Your website">
+                                </div>
+                                <div class="form-check">
+                                    <label for="form-check-label">
+                                    <input ng-model="feed.subscribe" type="checkbox" class="form-check-input ng-pristine ng-untouched ng-valid"> 
+                                    Subscribe Newsletter
+                                    </label>
+                                    <small class="form-text text-muted">We will update you as sson as we upload new content.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Your message</label>
+                                    <textarea type="text" class="form-control ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" ng-model="feed.message"
+                                    required id="message" aria-describedby="messageHelp" placeholder="Your message"></textarea>
+                                    <small id="messageHelp" class="form-text text-muted">Write your thoughts here</small>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                        <hr class="my-4">
+                        <br>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="header">
+                                    <h2 class="text-center">Or contact us by</h2>
+                                </div>
+                                <div class="card-block">
+                                    <div class="row justify-content-center">
+                                        <div class>
+                                            <a href="https://www.facebook.com/shubhamonspeed" target="_blank">
+                                            <button class="btn btn-lg btn-primary" href="https://www.facebook.com/shubhamonspeed">
+                                            <i class="fa fa-facebook-official">
+                                                <!---::before-->
+                                            </i></button></a>
+                                            <a href="https://plus.google.com/u/0/109607992391578439161" target="_blank">
+                                                <button class="btn btn-lg btn-danger">
+                                                <i class="fa fa-google-plus">
+                                                    <!---::before-->
+                                                </i></button></a>
+                                                <a href="https://www.instagram.com/shubham_on_speed/">
+                                                <button class="btn btn-lg btn-danger">
+                                                    <i class="fa fa-instagram">
+                                                    <!---::before-->
+                                                </i></button></a>
+                                                <a href="https://www.linkedin.com/in/shubham-kumar-8a2151148/">
+                                                <button class="btn btn-lg btn-primary">
+                                                <i class="fa fa-linkedin-square">
+                                                    <!---::before-->
+                                                </i></button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="addthis_relatedposts_inline">
+                <footer style="background-color: #333;margin-top:5px">
+                    <div class="container" style="padding-top: 15px">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6>Copyright ©:ShubhamKumar 2020</h6>
+                      </div>
+                      <div class="col-sm-3">
+                        <h6>Navigation</h6>
+                        <ul class="unstyle">
+                          <li>
+                            <a ui-sref="home" href="#/home">Home</a>
+                          </li>
+                          <li>
+                            <a ui-sref="videos" href="#/videos">Videos</a>
+                          </li>
+                          <li>
+                            <a ui-sref="newsfeed" href="#/newsfeed">News Feed</a>
+                          </li>
+                          <li>
+                            <a ui-sref="contactus" href="#/contactus">Contact Us</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-sm-6">
+                        <form class="form-inline navbar-form ng-pristine ng-valid-email ng-invalid ng-invalid-required" ng-submit="feedback(feed)">
+                          <input type="email" class="form-control ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" ng-model="feed.email" required
+                          placeholder="Subscribe Newsletter" id="news">
+                          <button type="submit" class="btn-btn-primary">
+                            <i class="fa-fa-envelope"></i>
+                          </button>
+                        </form>
+                        <small class="form-text text-muted">Send your suggestion here...</small>
+                        <br>
+                      </div>
+                      </div>
+                      <p class="text-muted text-center">
+                        "Coded with "
+                        <i class="fa-fa-heart">
+                          <!----::before--->
+                        </i>
+                         "by"
+                         <a href="https://www.facebook.com/shubhamonspeed" target="_blank">Shubham Kumar</a>
+                      </p>
+                    </div>
+                    </footer>
+            </div>
+          </div>
+    </body>
+</html>

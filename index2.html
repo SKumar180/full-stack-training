@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Demo website</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      </head>
+    <body>
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" href="#">
+                <img src="https://media.comicbook.com/wp-content/uploads/2013/04/man-of-steel-not-an-s.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+                <span style="font-family: 'lobster', serif;">Shubham Kumar</span>
+            </a>
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" ui-sref="home" href="#/home"><i class="fa fa-home">::before</i>"Home" <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" ui-sref="videos" href="#/videos"><i class="fa fa-youtube"></i>Videos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled"ui-sref="newsfeed" href="#/newsfeed"><i class="fa fa-newspaper-o">::before</i>News Feed</a>
+                </li>
+              </ul>
+              <li class="nav-item">
+                <a class="nav-link disabled"ui-sref="contactus" href="#/contactus"><i class="fa fa-bug"></i>Contact Us</a>
+              </li>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+          <div ui-view class="ng-scope">
+              <div class="ng-scope">
+                <div class="container">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                              ::before
+                              ::after
+                          </li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1">
+                              ::before
+                              ::after
+                          </li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2">
+                              ::before
+                              ::after
+                          </li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                              <a class="carousel-item active" id="slide1" href="https://www.radiotimes.com/news/on-demand/2020-06-05/best-tv-shows-netflix/">
+                            <img class="d-block img-fluid" src="https://thetecheducation.com/wp-content/uploads/2020/04/attack-on-titan-season-3-part-2-visual-1162021-1280x0-1.jpeg" alt="First slide">
+                            <div  style=" background: rgba(122,130,136,0.6)!important" class="carousel-caption d-none d-md-block">
+                                <h3>TV Series</h3>
+                                <p>Here best tvseries information</p>
+                              </div>
+                            </a>
+                              <a class="carousel-item" id="slide2" target="_blank" href="https://www.youtube.com/user/joblotvtrailers">
+                            <img class="d-block img-fluid" src="https://img1.looper.com/img/gallery/lucifer-season-5-release-date-cast-plot-and-spoilers/intro-1590337576.jpg" alt="Second slide">
+                            <div style=" background: rgba(122,130,136,0.6)!important" class="carousel-caption d-none d-md-block">
+                                <h3>Trailers</h3>
+                                <button class="btn btn-sm btn-success">Watch Now</button>
+                              </div>
+                            </a>
+                          <a class="carousel-item" id="slide3" target="_blank" href="https://www.digitaltrends.com/movies/best-new-shows-to-stream-this-week/">
+                            <img class="d-block img-fluid" src="https://www.marcabees.com/wp-content/uploads/2018/01/Fb-News-Feed-Marcabees.jpg" alt="Third slide">
+                            <div style=" background: rgba(122,130,136,0.7)!important" class="carousel-caption d-none d-md-block">
+                                <h3>Top News</h3>
+                                <p>Ready for latest news</p>
+                              </div>
+                        </a>
+                        <a class="carousel-item" id="slide3" target="_blank" href="https://www.digitaltrends.com/movies/best-new-shows-to-stream-this-week/"></a>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                      <br>
+                      <div class="jumbotron">
+                          <h1 class="display-3">Keep Watching</h1>
+                          <p class="lead">Hurry go for the new tvseries!!!</p>
+                      </div>
+                      <div class="row">
+                        <div class="card ng-sccope"  ng-repeat="card in newsCard" style="width: 20.5rem; margin:0.2pc 1.5em 0.2pc 1.5em">
+                            <img class="card-img-top" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})" height="180px" style="max-width:100%" ng-src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" 
+                            alt="what is going on netflix" src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" >
+                            <div class="card-block">
+                              <h4 class="card-title ng-binding" neo-ui-sref="article({topic:card.titleUrl id:card._id})" ng-click="readFullNews(card)" >What is going on Netflix</h4>
+                              <button role="button" class="btn btn-outline-success my-2 my-sm-0" ng-click="displayModel(card)" data-toggle="model" data-target="#exampleModelLong">Qucick Look</button>
+
+                              
+                              <a ui role="button" class="btn btn-outline-primary my-2 my-lg-0" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})">Read Full News</a>
+                            </div>
+                            <div class="card-footer text-muted ng-binding">
+                               May 30, 2020, 5:50 pm EST
+                            </div>
+                          </div>
+
+                          <div class="card ng-sccope"  ng-repeat="card in newsCard" style="width: 20.5rem; margin:0.2pc 1.5em 0.2pc 1.5em">
+                            <img class="card-img-top" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})" height="180px" style="max-width:100%" ng-src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" 
+                            alt="what is going on netflix" src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" >
+                            <div class="card-block">
+                              <h4 class="card-title ng-binding" neo-ui-sref="article({topic:card.titleUrl id:card._id})" ng-click="readFullNews(card)" >What is going on Netflix</h4>
+                              <button role="button" class="btn btn-outline-success my-2 my-sm-0" ng-click="displayModel(card)" data-toggle="model" data-target="#exampleModelLong">Qucick Look</button>
+
+                              
+                              <a ui role="button" class="btn btn-outline-primary my-2 my-lg-0" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})">Read Full News</a>
+                            </div>
+                            <div class="card-footer text-muted ng-binding">
+                               May 30, 2020, 5:50 pm EST
+                            </div>
+                          </div>
+
+                          <div class="card ng-sccope"  ng-repeat="card in newsCard" style="width: 20.5rem; margin:0.2pc 1.5em 0.2pc 1.5em">
+                            <img class="card-img-top" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})" height="180px" style="max-width:100%" ng-src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" 
+                            alt="what is going on netflix" src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" >
+                            <div class="card-block">
+                              <h4 class="card-title ng-binding" neo-ui-sref="article({topic:card.titleUrl id:card._id})" ng-click="readFullNews(card)" >What is going on Netflix</h4>
+                              <button role="button" class="btn btn-outline-success my-2 my-sm-0" ng-click="displayModel(card)" data-toggle="model" data-target="#exampleModelLong">Qucick Look</button>
+
+                              
+                              <a ui role="button" class="btn btn-outline-primary my-2 my-lg-0" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})">Read Full News</a>
+                            </div>
+                            <div class="card-footer text-muted ng-binding">
+                               May 30, 2020, 5:50 pm EST
+                            </div>
+                          </div>
+
+                          <div class="card ng-sccope"  ng-repeat="card in newsCard" style="width: 20.5rem; margin:0.2pc 1.5em 0.2pc 1.5em">
+                            <img class="card-img-top" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})" height="180px" style="max-width:100%" ng-src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" 
+                            alt="what is going on netflix" src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" >
+                            <div class="card-block">
+                              <h4 class="card-title ng-binding" neo-ui-sref="article({topic:card.titleUrl id:card._id})" ng-click="readFullNews(card)" >What is going on Netflix</h4>
+                              <button role="button" class="btn btn-outline-success my-2 my-sm-0" ng-click="displayModel(card)" data-toggle="model" data-target="#exampleModelLong">Qucick Look</button>
+
+                              
+                              <a ui role="button" class="btn btn-outline-primary my-2 my-lg-0" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})">Read Full News</a>
+                            </div>
+                            <div class="card-footer text-muted ng-binding">
+                               May 30, 2020, 5:50 pm EST
+                            </div>
+                          </div>
+
+                          <div class="card ng-sccope"  ng-repeat="card in newsCard" style="width: 20.5rem; margin:0.2pc 1.5em 0.2pc 1.5em">
+                            <img class="card-img-top" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})" height="180px" style="max-width:100%" ng-src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" 
+                            alt="what is going on netflix" src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" >
+                            <div class="card-block">
+                              <h4 class="card-title ng-binding" neo-ui-sref="article({topic:card.titleUrl id:card._id})" ng-click="readFullNews(card)" >What is going on Netflix</h4>
+                              <button role="button" class="btn btn-outline-success my-2 my-sm-0" ng-click="displayModel(card)" data-toggle="model" data-target="#exampleModelLong">Qucick Look</button>
+
+                              
+                              <a ui role="button" class="btn btn-outline-primary my-2 my-lg-0" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})">Read Full News</a>
+                            </div>
+                            <div class="card-footer text-muted ng-binding">
+                               May 30, 2020, 5:50 pm EST
+                            </div>
+                          </div>
+
+                          <div class="card ng-sccope"  ng-repeat="card in newsCard" style="width: 20.5rem; margin:0.2pc 1.5em 0.2pc 1.5em">
+                            <img class="card-img-top" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})" height="180px" style="max-width:100%" ng-src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" 
+                            alt="what is going on netflix" src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" >
+                            <div class="card-block">
+                              <h4 class="card-title ng-binding" neo-ui-sref="article({topic:card.titleUrl id:card._id})" ng-click="readFullNews(card)" >What is going on Netflix</h4>
+                              <button role="button" class="btn btn-outline-success my-2 my-sm-0" ng-click="displayModel(card)" data-toggle="model" data-target="#exampleModelLong">Qucick Look</button>
+
+                              
+                              <a ui role="button" class="btn btn-outline-primary my-2 my-lg-0" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})">Read Full News</a>
+                            </div>
+                            <div class="card-footer text-muted ng-binding">
+                               May 30, 2020, 5:50 pm EST
+                            </div>
+                          </div>
+
+                          <div class="card ng-sccope"  ng-repeat="card in newsCard" style="width: 20.5rem; margin:0.2pc 1.5em 0.2pc 1.5em">
+                            <img class="card-img-top" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})" height="180px" style="max-width:100%" ng-src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" 
+                            alt="what is going on netflix" src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" >
+                            <div class="card-block">
+                              <h4 class="card-title ng-binding" neo-ui-sref="article({topic:card.titleUrl id:card._id})" ng-click="readFullNews(card)" >What is going on Netflix</h4>
+                              <button role="button" class="btn btn-outline-success my-2 my-sm-0" ng-click="displayModel(card)" data-toggle="model" data-target="#exampleModelLong">Qucick Look</button>
+
+                              
+                              <a ui role="button" class="btn btn-outline-primary my-2 my-lg-0" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})">Read Full News</a>
+                            </div>
+                            <div class="card-footer text-muted ng-binding">
+                               May 30, 2020, 5:50 pm EST
+                            </div>
+                          </div>
+
+                          <div class="card ng-sccope"  ng-repeat="card in newsCard" style="width: 20.5rem; margin:0.2pc 1.5em 0.2pc 1.5em">
+                            <img class="card-img-top" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})" height="180px" style="max-width:100%" ng-src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" 
+                            alt="what is going on netflix" src="https://www.whats-on-netflix.com/wp-content/uploads/2020/05/new-indian-titles-on-netflix-may-2020.jpg" >
+                            <div class="card-block">
+                              <h4 class="card-title ng-binding" neo-ui-sref="article({topic:card.titleUrl id:card._id})" ng-click="readFullNews(card)" >What is going on Netflix</h4>
+                              <button role="button" class="btn btn-outline-success my-2 my-sm-0" ng-click="displayModel(card)" data-toggle="model" data-target="#exampleModelLong">Qucick Look</button>
+
+                              
+                              <a ui role="button" class="btn btn-outline-primary my-2 my-lg-0" ng-click="readFullNews(card)" neo-ui-sref="article({topic:card.titleUrl id:card._id})">Read Full News</a>
+                            </div>
+                            <div class="card-footer text-muted ng-binding">
+                               May 30, 2020, 5:50 pm EST
+                            </div>
+                          </div>
+                          <!------------>
+                           <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                             <div class="modal-dialog" role="document">
+                               <div class="modal-content">
+                                 <div class="modal-header">
+                                   <h5 class="modal-title ng-binding" id="exampleModalLongTitle"></h5>
+                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                     <span aria-hidden="true"></span>
+                                   </button>
+                                 </div>
+                                 <div class="modal-body">
+                                   <img class="card-img-top" height="180px" style="max-width: 100%;margin:auto"alt="">
+                                   <p ng-blind-html="news.maindetail" class="ng-binding"></p>
+                                 </div>
+                                 <div class="modal-footer">
+                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                   <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="readFullNews(news)">Read Full News</button>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                           <!---modal ends-->
+                      </div>
+                </div>
+                <div class="addthis_relatedposts_inline"></div>
+                <footer style="background-color: #333;margin-top:5px">
+                <div class="container" style="padding-top: 15px">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6>Copyright ©:ShubhamKumar 2020</h6>
+                  </div>
+                  <div class="col-sm-3">
+                    <h6>Navigation</h6>
+                    <ul class="unstyle">
+                      <li>
+                        <a ui-sref="home" href="#/home">Home</a>
+                      </li>
+                      <li>
+                        <a ui-sref="videos" href="#/videos">Videos</a>
+                      </li>
+                      <li>
+                        <a ui-sref="newsfeed" href="#/newsfeed">News Feed</a>
+                      </li>
+                      <li>
+                        <a ui-sref="contactus" href="#/contactus">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-6">
+                    <form class="form-inline navbar-form ng-pristine ng-valid-email ng-invalid ng-invalid-required" ng-submit="feedback(feed)">
+                      <input type="email" class="form-control ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" ng-model="feed.email" required
+                      placeholder="Subscribe Newsletter" id="news">
+                      <button type="submit" class="btn-btn-primary">
+                        <i class="fa-fa-envelope"></i>
+                      </button>
+                    </form>
+                    <small class="form-text text-muted">Send your suggestion here...</small>
+                    <br>
+                  </div>
+                  </div>
+                  <p class="text-muted text-center">
+                    "Coded with "
+                    <i class="fa-fa-heart">
+                      <!----::before--->
+                    </i>
+                     "by"
+                     <a href="https://www.facebook.com/shubhamonspeed" target="_blank">Shubham Kumar</a>
+                  </p>
+                </div>
+                </footer>
+          </div>
+          </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
