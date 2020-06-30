@@ -1,6 +1,31 @@
+<<<<<<< HEAD
 <script type = "text/javascript">
 
       // Form validation code will come here.
+=======
+function validateForm() {
+   var x = document.forms["myForm"]["name"].value;
+   var y = document.forms["myForm"]["mail"].value;
+   var z = document.forms["myForm"]["message"].value;
+   if (x == "" || y == "" || z == "" ) {
+       alert("Please fill in the missing details");
+       return false;
+   } else{
+       alert("thanks we'll contact you shortly");
+       return false;
+   }
+}
+
+
+
+
+
+
+
+
+
+    /*  // Form validation code will come here.
+>>>>>>> bcc9ef9b5f42eed1abf571de90cdd3d76d8e96c7
       function validate() {
       
          if( document.myForm.Name.value == "" ) {
@@ -36,7 +61,6 @@
          if( document.myForm.Country.value == "-1" ) {
             alert( "Please provide your country!" );
             return false;
-         }*/
-         return( true );
-   //-->
-</script>
+         }
+         return( true ); */
+
